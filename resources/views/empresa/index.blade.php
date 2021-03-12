@@ -2,6 +2,7 @@
 
 @section('contenido')
 <a href="empresas/create" class="btn btn-primary">Agregar empresa</a>
+<a href="empleados" class="btn btn-secondary">Ver empleados</a>
 
 <table class="table table-dark table-striped mt-4">
     <thead>
@@ -20,8 +21,8 @@
                 <td>{{$empresa->id}}</td>
                 <td>{{$empresa->nombre}}</td>
                 <td>{{$empresa->email}}</td>
-                <td><a href="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg" target="_blank">WEB</a></td>
-                <td><img src="<?php $empresa->sitio_web ?>"/></td>
+                <td><a href={{$empresa->sitio_web}} target="_blank">WEB</a></td>
+                <td><img src="{{$empresa->logo}}" width="100" height="100"/></td>
                 <td>
                     <form action="{{ route ('empresas.destroy', $empresa->id)}}" method="POST">
                     @csrf

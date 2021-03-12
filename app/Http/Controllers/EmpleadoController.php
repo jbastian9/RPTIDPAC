@@ -13,10 +13,22 @@ class EmpleadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $empleados = Empleado::all();
-        return view('empleado.index')->with('empleados', $empleados);
+        $nombre = $request->get('buscarPor');
+
+        if($nombre == "")
+        {
+            $empleados = Empleado::all();
+            return view('empleado.index')->with('empleados', $empleados);
+        }
+        else
+        {
+            $empleados = \DB::table('empleados')
+            ->select('empleados.*')->where('nombre', 'LIKE', "%$nombre%")
+            ->get();
+            return view('empleado.index')->with('empleados', $empleados);
+        }
     }
 
     /**

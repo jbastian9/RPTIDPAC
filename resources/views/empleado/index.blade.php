@@ -1,7 +1,21 @@
 @extends('layouts.plantillabase');
 
 @section('contenido')
-<a href="empleados/create" class="btn btn-primary">Agregar empleados</a>
+
+
+<nav class="navbar navbar-light">
+  <div class="container-fluid">
+    <div>
+        <a href="empleados/create" class="btn btn-primary">Agregar empleados</a>
+        <a href="empresas" class="btn btn-secondary">Ver empresas</a>
+    </div>
+    
+    <form class="d-flex">
+      <input name="buscarPor" class="form-control me-2" type="search" placeholder="Ingrese un nombre" aria-label="Buscar">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
 <table class="table table-dark table-striped mt-4">
     <thead>
