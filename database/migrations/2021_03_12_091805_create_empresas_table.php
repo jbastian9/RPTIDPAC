@@ -17,8 +17,8 @@ class CreateEmpresasTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->text('email')->unique();
-            $table->string('logo');
-            $table->string('sitio_web');
+            $table->text('logo');
+            $table->text('sitio_web');
             $table->timestamps();
         });
     }

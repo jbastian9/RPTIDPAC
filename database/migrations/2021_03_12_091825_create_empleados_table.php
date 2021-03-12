@@ -18,7 +18,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->text('email')->unique();
-            $table->string('telefono')->unique();
+            $table->string('telefono');
             $table->unsignedBigInteger('empresa_id')->nullable();
             $table->foreign('empresa_id')->references('id')->on('empresas')->onDelete('set null');
             $table->timestamps();
