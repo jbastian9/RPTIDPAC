@@ -3,7 +3,7 @@
 @section('contenido')
 <a href="empresas/create" class="btn btn-primary">Agregar empresa</a>
 <a href="empleados" class="btn btn-secondary">Ver empleados</a>
-
+<a href="dashboard" class="btn btn-secondary">Panel</a>
 <table class="table table-dark table-striped mt-4">
     <thead>
         <tr>

@@ -8,6 +8,7 @@
     <div>
         <a href="empleados/create" class="btn btn-primary">Agregar empleados</a>
         <a href="empresas" class="btn btn-secondary">Ver empresas</a>
+        <a href="dashboard" class="btn btn-secondary">Panel</a>
     </div>
     
     <form class="d-flex">
